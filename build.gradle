@@ -8,15 +8,17 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "net.ltgt.gradle:gradle-apt-plugin:0.6"
+        classpath "net.ltgt.gradle:gradle-apt-plugin:0.8"
     }
 }
 
 allprojects {
     repositories {
-        maven {
-            url 'http://oss.sonatype.org/content/repositories/snapshots'
+        jcenter()
+    }
+    dependencies {
+        repositories {
+            jcenter()
         }
-        mavenCentral()
     }
 }

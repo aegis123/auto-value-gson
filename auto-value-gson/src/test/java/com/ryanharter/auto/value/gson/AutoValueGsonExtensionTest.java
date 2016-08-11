@@ -3,10 +3,11 @@ package com.ryanharter.auto.value.gson;
 import com.google.auto.value.processor.AutoValueProcessor;
 import com.google.common.collect.ImmutableSet;
 import com.google.testing.compile.JavaFileObjects;
-import java.util.Arrays;
-import javax.tools.JavaFileObject;
 import org.junit.Before;
 import org.junit.Test;
+
+import javax.tools.JavaFileObject;
+import java.util.Arrays;
 
 import static com.google.common.truth.Truth.assertAbout;
 import static com.google.testing.compile.JavaSourceSubjectFactory.javaSource;
@@ -161,11 +162,11 @@ public class AutoValueGsonExtensionTest {
         + "      Map<String, Set<String>> h = null;\n"
         + "      String i = null;\n"
         + "      while (jsonReader.hasNext()) {\n"
-        + "        String _name = jsonReader.nextName();\n"
         + "        if (jsonReader.peek() == JsonToken.NULL) {\n"
         + "          jsonReader.skipValue();\n"
         + "          continue;\n"
         + "        }\n"
+        + "        String _name = jsonReader.nextName();\n"
         + "        switch (_name) {\n"
         + "          case \"a\": {\n"
         + "            a = aAdapter.read(jsonReader);\n"
@@ -279,11 +280,11 @@ public class AutoValueGsonExtensionTest {
         + "      String name = null;\n"
         + "      boolean awesome = false;\n"
         + "      while (jsonReader.hasNext()) {\n"
-        + "        String _name = jsonReader.nextName();\n"
         + "        if (jsonReader.peek() == JsonToken.NULL) {\n"
         + "          jsonReader.skipValue();\n"
         + "          continue;\n"
         + "        }\n"
+        + "        String _name = jsonReader.nextName();\n"
         + "        switch (_name) {\n"
         + "          case \"name\": {\n"
         + "            name = nameAdapter.read(jsonReader);\n"
@@ -516,11 +517,11 @@ public class AutoValueGsonExtensionTest {
         + "      jsonReader.beginObject();\n"
         + "      char c = '\0';\n"
         + "      while (jsonReader.hasNext()) {\n"
-        + "        String _name = jsonReader.nextName();\n"
         + "        if (jsonReader.peek() == JsonToken.NULL) {\n"
         + "          jsonReader.skipValue();\n"
         + "          continue;\n"
         + "        }\n"
+        + "        String _name = jsonReader.nextName();\n"
         + "        switch (_name) {\n"
         + "          case \"c\": {\n"
         + "            c = cAdapter.read(jsonReader);\n"
@@ -618,11 +619,11 @@ public class AutoValueGsonExtensionTest {
         + "      B b = null;\n"
         + "      String d = null;\n"
         + "      while (jsonReader.hasNext()) {\n"
-        + "        String _name = jsonReader.nextName();\n"
         + "        if (jsonReader.peek() == JsonToken.NULL) {\n"
         + "          jsonReader.skipValue();\n"
         + "          continue;\n"
         + "        }\n"
+        + "        String _name = jsonReader.nextName();\n"
         + "        switch (_name) {\n"
         + "          case \"c\": {\n"
         + "            c = cAdapter.read(jsonReader);\n"
